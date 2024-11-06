@@ -1,0 +1,150 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F1F6FC;
+}
+
+header {
+    position: relative;
+    background-color: #C9E2FF;
+    color: white;
+    padding: 50px 0;
+
+}
+
+nav ul {
+    list-style-type: none;
+    fontFamily: Raleway;
+
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 60px;
+    float: right;
+
+}
+
+nav a {
+    color: #5BA2F3;
+    text-decoration: none;
+
+}
+
+main {
+    padding: 20px;
+}
+
+h1, h2 {
+    color: #4A84C6;
+    text-align: center;
+}
+h1{
+    text-shadow: 0 0 10px #C9E2FF, 0 0 15px #C9E2FF, 0 0 20px #5BA2F3;
+}
+p{
+    line-height:250%;
+    margin-bottom: 15px;
+}
+
+img {
+    max-width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+th {
+    background-color: #EEF6FF;
+}
+
+td {
+    text-align: center; /* Выравнивание по центру */
+}
+
+td:nth-child(2) {
+    text-align: left; /* Выравнивание по левому краю для второго столбца */
+    width: 1000px;
+}
+
+td:nth-child(3) {
+    text-align: right; /* Выравнивание по правому краю для третьего столбца */
+}
+
+input {
+    background: white;
+    width: 200px;
+    height: 30px;
+    outline: none;
+}
+
+button {
+    width: 150px;
+    height: 35px;
+    background: #C9E2FF;
+    text-align: center;
+}
+
+input, button{
+    border-radius: 30px;
+    border: 1px #5BA2F3 solid;
+    margin-bottom: 25px;
+}
+
+input, button, label, p, td{
+    color: black;
+    font-size: 18px;
+    font-family: Inter, serif;
+    font-weight: 300;
+    word-wrap: break-word;
+}
+input:focus:active, button:focus:active {
+    /* Подсветка при нажатии на элемент в фокусе */
+    box-shadow: 0 4px 4px #5BA2F3;
+}
+
+a {
+    text-decoration: none; /* Убираем подчёркивание */
+    font-weight: bold;
+}
+
+footer {
+    background-color: #C9E2FF;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.cactus {
+    width: 57px;
+    height: 62px;
+    left: 25px;
+    top: 25px;
+    position: absolute;
+    text-align: center;
+}
+
+.name {
+    position: absolute;
+    color: black;
+    font-size: 20px;
+    font-family: Inter, serif;
+    font-style: italic;
+    font-weight: 200;
+    text-transform: capitalize;
+    word-wrap: break-word;
+    left: 100px;
+    top: 50px;
+    text-align: center;
+}
