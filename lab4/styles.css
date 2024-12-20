@@ -1,0 +1,346 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F1F6FC;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: #C9E2FF;
+    padding: 50px 20px;
+}
+/* Верстка с помощью flexbox */
+.header-container {
+    display: flex;
+    align-items: center; /* Вертикальное выравнивание элементов */
+    justify-content: space-between; /* Разделение элементов по краям */
+}
+nav ul {
+    list-style-type: none;
+    fontFamily: Raleway;
+    margin: 0;
+    padding: 0;
+    display: flex;
+
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 60px;
+    float: right;
+
+}
+
+nav a {
+    color: #5BA2F3;
+    text-decoration: none;
+
+}
+main {
+    padding: 50px;
+}
+
+h1, h2 {
+    color: #4A84C6;
+    text-align: center;
+}
+
+h1{
+    text-shadow: 0 0 10px #C9E2FF, 0 0 15px #C9E2FF, 0 0 20px #5BA2F3;
+}
+
+p{
+    line-height:250%;
+    margin-bottom: 15px;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Анимация для фотографии на главной странице*/
+.index-img img {
+    animation: slide-in 3s ease forwards; /* Применение анимации длительностью 3 секунды*/
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateY(-100%); /* Начальная позиция: за пределами экрана сверху */
+        opacity: 0; /* Начальная непрозрачность */
+    }
+    to {
+        transform: translateY(0); /* Конечная позиция: на месте */
+        opacity: 1; /* Конечная непрозрачность */
+    }
+}
+/* Верстка с помощью flexbox */
+.flexbox-section {
+    display: flex;
+    flex-direction: column; /* Вертикальное расположение */
+    max-width: 800px; /* Ограничиваем максимальную ширину секции */
+    margin: auto; /* Центрируем секцию */
+}
+
+.flexbox-section img {
+    max-width: 100%; /* Ограничиваем ширину изображений */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse; /* Убираем двойные границы между ячейками */
+}
+
+.table-header {
+    display: flex;
+    background-color: #EEF6FF;
+    font-weight: bold; /* Жирный шрифт для заголовков */
+}
+
+.table-row {
+    display: table-row; /* Используем стандартное отображение для строк таблицы */
+}
+
+.table-cell {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center; /* Выравнивание по центру по умолчанию */
+    flex: 1;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center; /* Выравнивание по центру */
+}
+
+th {
+    background-color: #EEF6FF;
+}
+
+/* Устанавливаем ширину для столбцов */
+.table-cell:nth-child(2) {
+    text-align: left; /* Выравнивание по левому краю для второго столбца */
+    flex: 2; /* Второй столбец занимает в два раза больше места */
+}
+
+.table-cell:nth-child(3),
+.table-cell:nth-child(4) {
+    flex: 1; /* Третий и четвертый столбцы занимают равное пространство */
+    text-align: right; /* Выравнивание по правому краю для третьего столбца */
+}
+
+input {
+    background: white;
+    width: 200px;
+    height: 30px;
+    outline: none;
+}
+/* Анимация для кнопки */
+button {
+    width: 150px;
+    height: 35px;
+    background: #C9E2FF;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer; /* Курсор при наведении */
+    transition: background 0.5s ease, transform 0.6s ease; /* Плавный переход фона и трансформации */
+}
+
+button:hover {
+    background: #A1C6FF;
+    transform: scale(1.2); /* Увеличение размера кнопки при наведении */
+}
+
+button:active {
+    transform: scale(0.95); /* Уменьшение размера кнопки при нажатии */
+}
+
+input, button{
+    border-radius: 30px;
+    border: 1px #5BA2F3 solid;
+    margin-bottom: 25px;
+}
+
+input, button, label, p, td{
+    color: black;
+    font-size: 18px;
+    font-family: Inter, serif;
+    font-weight: 300;
+    word-wrap: break-word;
+}
+input:focus {
+    outline: none;
+    box-shadow: 0 4px 10px rgba(91, 162, 243, 0.5); /* Подсветка при фокусе */
+    transition: box-shadow 0.3s ease; /* Плавный переход для box-shadow */
+}
+
+a {
+    text-decoration: none; /* Убираем подчёркивание */
+    font-weight: bold;
+}
+/* Верстка с помощью grid */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Три столбца */
+    gap: 5px; /* расстояние между изображениями */
+}
+
+.gallery-grid img {
+    display: grid;
+    height: 100%; /* Фиксированная высота для всех изображений */
+    object-fit: cover; /* Обрезка изображения для заполнения контейнера */
+}
+.gallery-grid img {
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 0.9s ease; /* Увеличиваем время плавного перехода */
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.2); /* Увеличение изображения при наведении */
+}
+footer {
+    background-color: #C9E2FF;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+
+.gallery > .cactus {
+    text-align: center;
+}
+
+.cactus {
+    width: 57px;
+    height: 62px;
+    left: 25px;
+    top: 25px;
+    position: absolute;
+    text-align: center;
+}
+
+.name {
+    position: absolute;
+    color: black;
+    font-size: 20px;
+    font-family: Inter, serif;
+    font-style: italic;
+    font-weight: 200;
+    text-transform: capitalize;
+    word-wrap: break-word;
+    left: 100px;
+    top: 50px;
+    text-align: center;
+}
+/* Анимация для текста на странице О нас */
+.left-animation p {
+    animation-duration: 5s;
+    animation-name: slidein-left; /* Имя анимации для текста, который появляется слева */
+    animation-fill-mode: forwards; /* Сохраняем конечное состояние анимации */
+}
+
+.right-animation p {
+    animation-duration: 5s;
+    animation-name: slidein-right; /* Имя анимации для текста, который появляется справа */
+    animation-fill-mode: forwards; /* Сохраняем конечное состояние анимации */
+}
+
+@keyframes slidein-left { /* Анимация для появления слева */
+    from {
+        margin-left: -100%; /* Начальная позиция (за пределами экрана слева) */
+        width: 300%; /* Ширина в начале анимации */
+    }
+    to {
+        margin-left: 0%; /* Конечная позиция */
+        width: 100%; /* Ширина в конце анимации */
+    }
+}
+
+@keyframes slidein-right { /* Анимация для появления справа */
+    from {
+        margin-left: 100%; /* Начальная позиция (за пределами экрана справа) */
+        width: 300%; /* Ширина в начале анимации */
+    }
+    to {
+        margin-left: 0%; /* Конечная позиция */
+        width: 100%; /* Ширина в конце анимации */
+    }
+}
+/* Окна ошибки и успешного отправления запроса на сервер*/
+.modal {
+    display: none; /* Скрываем модальное окно по умолчанию */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Включаем прокрутку, если необходимо */
+    background-color: rgba(0, 0, 0, 0.7); /* Более темный полупрозрачный фон */
+}
+
+.modal-content {
+    background-color: #ffffff; /* Белый фон для модального окна */
+    margin: 10% auto; /* Центрируем модальное окно */
+    padding: 20px;
+    border-radius: 12px; /* Закругленные углы */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Более выраженная тень для модального окна */
+    width: 80%; /* Ширина модального окна */
+    max-width: 500px; /* Максимальная ширина модального окна */
+    animation: fadeIn 0.5s; /* Анимация появления модального окна */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.close-button,
+.close-button-success {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    transition: color 0.3s; /* Плавный переход цвета */
+}
+
+.close-button:hover,
+.close-button:focus,
+.close-button-success:hover,
+.close-button-success:focus {
+    color: #ff0000; /* Цвет при наведении на кнопку закрытия */
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#error-messages p,
+#success-message p {
+    margin: 15px 0; /* Отступы между сообщениями */
+}
+
+#error-messages {
+    color: red;
+}
+#success-message {
+    color: green;
+}
+
+#error-messages,
+#success-message {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#error-messages {
+    background-color: rgba(255, 0, 0, 0.1); /* Полупрозрачный красный фон */
+}
+
+#success-message {
+    background-color: rgba(0, 255, 0, 0.1); /* Полупрозрачный зеленый фон */
+}
