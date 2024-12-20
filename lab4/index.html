@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Главная</title>
+</head>
+<body>
+<header>
+    <div class="header-container">
+        <div class="name">TravelCactus</div>
+        <img class="cactus"  src="images/cactus.png">
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="gallery.html">Галерея</a></li>
+                <li><a href="contact.html">Контакты</a></li>
+                <li><a href="about.html">О нас</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<main>
+    <section class="flexbox-section">
+        <h1>Путешествовать по России с нами - лучший ваш выбор!</h1>
+        <h2>Почему нужно выбрать именно нас?</h2>
+        <p> Наша компания предлагает уникальные маршруты для путешествий по всей России.
+            Мы найдем для вас подходящий маршрут и учтем все ваши потребности!
+        </p>
+        <div  class="index-img"><img src="images/image1.jpg" alt="Путешествие" /></div>
+
+    </section>
+
+    <section class="flexbox-section">
+        <h2>Горящие туры</h2>
+        <table class="table-header">
+            <tr class="table-row">
+                <th class="table-cell">Город</th>
+                <th class="table-cell">Описание</th>
+                <th class="table-cell">Даты</th>
+                <th class="table-cell">Стоимость</th>
+            </tr>
+            <tr class="table-row">
+                <td class="table-cell">Карелия</td>
+                <td class="table-cell">Карелия – это регион с целым набором туристических брендов: практически все слышали о Кижах и Валааме, Онежском озере и горном парке Рускеала.
+                    Это один из самых популярных туристических регионов России, куда едут любоваться на шедевры деревянного зодчества и живописный Мраморный каньон,
+                    отдыхать на чистых пляжах и искать затонувшие корабли, покорять леса и любоваться на водопады. </td>
+                <td class="table-cell">21 - 22 декабря 2024</td>
+                <td class="table-cell">30 000 руб/чел</td>
+            </tr>
+            <tr class="table-row">
+                <td class="table-cell">Мурманск</td>
+                <td class="table-cell">Расположенный на сопках Кольского залива Мурманск — крупнейший город в мире за полярным кругом. Летом здесь стоит полярный день — два месяца 24 часа в сутки светит солнце.
+                    Зимой же тут царит полярная ночь и часто можно увидеть северное сияние над незамерзающим морем.
+                    В порту Мурманска пришвартован первый в мире атомный ледокол «Ленин», за штурвалом которого можно постоять.
+                    А местные рестораны порадуют ценителей гастрономии морепродуктами и олениной.</td>
+                <td class="table-cell">22 - 27 декабря 2024</td>
+                <td class="table-cell">50 000 руб/чел</td>
+            </tr>
+            <tr class="table-row">
+                <td class="table-cell">Горно-Алтайск</td>
+                <td class="table-cell">Главный повод побывать в столице и единственном городе республики — Национальный музей им. А. В. Анохина, основанный более ста лет назад.
+                    В его коллекции свыше 60 тыс. объектов, в том числе палеонтологические и археологические находки, редкие образцы флоры, фауны и минералов, культовая атрибутика и предметы быта коренных народностей.
+                    Главный экспонат — знаменитая Алтайская принцесса.
+                    Мумии знатной женщины из скифского могильника в урочище Укок посвящён целый зал, но саму её из уважения к традициям демонстрируют лишь несколько раз в месяц — в дни новолуния.</td>
+                <td class="table-cell">25 - 30 декабря 2024</td>
+                <td class="table-cell">70 000 руб/чел</td>
+            </tr>
+        </table>
+        <p>Хотите посмотреть все туры?</p>
+        <button id="all_tour">Все туры</button>
+    <div id="table_tour" style="display:none;">
+        <table>
+            <thead>
+            <tr class="table-row">
+                <th class="table-cell">Город</th>
+                <th class="table-cell">Описание</th>
+                <th class="table-cell">Даты</th>
+                <th class="table-cell">Стоимость</th>
+            </tr>
+            </thead>
+            <tbody class="table-body" id="tour_row"></tbody>
+        </table>
+    </div>
+    </section>
+    <script src="ScriptIndex.js"></script>
+</main>
+<footer>
+    <p>&copy; 2024 Путешествия. Все права защищены.</p>
+</footer>
+</body>
+</html>

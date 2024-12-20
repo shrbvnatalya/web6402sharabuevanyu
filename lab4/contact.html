@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Контакты</title>
+</head>
+<body>
+<header>
+    <div class="header-container">
+        <div class="name">TravelCactus</div>
+        <img class="cactus"  src="images/cactus.png">
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="gallery.html">Галерея</a></li>
+                <li><a href="contact.html">Контакты</a></li>
+                <li><a href="about.html">О нас</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<main>
+    <h1>Контакты</h1>
+        <h2>Наши контакты</h2>
+        <p>Email: info@travel.com</p>
+        <p>Телефон: +7(923)456-78-90</p>
+        <p>ВК:
+            <a href="https://vk.com/travelcactus" target="_blank">TravelCactus!</a></p>
+        <!-- Форма обратной связи -->
+        <h2>Ваши контакты</h2>
+        <p>Напишите нам ваши контакты и место, куда вы хотите, и мы с вами свяжемся.</p>
+        <form id="contactForm" method="post" onsubmit="return ContactForm()">
+
+            <label for="name">Имя:</label><br />
+            <input type="text" id="name" name="name" required><br/>
+
+            <label for="email">Email:</label><br />
+            <input type="email" id="email" name="email" required><br/>
+
+            <label for="tel">Телефон:</label><br/>
+            <input type="tel" id="tel" name="tel" required><br/>
+
+            <label for="town">Город:</label><br />
+            <input type="text" id="town" name="town" required><br />
+
+            <button type="submit">Отправить</button>
+        </form>
+    <!-- Модальное окно для ошибок -->
+    <div id="errorModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <div id="error-messages"></div>
+        </div>
+    </div>
+
+    <!-- Модальное окно для успешного сообщения -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button-success">&times;</span>
+            <div id="success-message"></div>
+        </div>
+    </div>
+    <script src="ScriptContact.js"></script>
+</main>
+<footer>
+    <p>&copy; 2024 Путешествия. Все права защищены.</p>
+</footer>
+</body>
+</html>
